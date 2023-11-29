@@ -1,0 +1,877 @@
+* {
+    margin: 0;
+    padding: 0;
+    scroll-behavior: smooth;
+}
+  
+body {
+    background-color: #F6F6F6;
+}
+
+@font-face {
+    font-family: 'philosopherRegular';
+    src: url('../../font/philosopher/Philosopher-Regular.ttf');
+}
+
+@font-face {
+    font-family: 'philosopherItalic';
+    src: url('../../font/philosopher/Philosopher-Italic.ttf');
+}
+
+@font-face {
+    font-family: 'RobotoRegular';
+    src: url('../../font/roboto/Roboto-Regular.ttf');
+}
+
+.entete {
+    height: 100px;
+}
+
+.spacer {
+    height: 150px;
+}
+
+#pageEquipe {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    height: 90vh;
+}
+
+#corpPage {
+    background: url(../../../inc/img/fondEquipe.svg);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+}
+
+.separation {
+    background: linear-gradient(#FFFFFF00, #4478204D, #77BC48, #4478204D, #FFFFFF1A);
+    width: 1vw;
+}
+
+.entete {
+    position: sticky;
+}
+
+.header {
+    display: grid;
+    grid-template-columns: 1fr 5fr 1fr;
+    justify-content: space-evenly;
+    width: 100vw;
+    align-items: center;
+    justify-items: center;
+}
+
+.header .titre {
+    font-size: 30px;
+    font-weight: bold;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    font-family: 'philosopherRegular';
+}
+
+.header .logo {
+    width: 200px;
+    margin-top: 1%;
+}
+
+.description {
+    width: 100vw;
+    display: grid;
+    justify-content: center;
+}
+
+.description span {
+    font-family: 'philosopherItalic';
+    width: 50vw;
+    height: 94px;
+    margin-left: 2%;
+    margin-top: -3%;
+    font-size: 20px;
+}
+
+.lienCategorie {
+    width: 100vw;
+    font-size: 20px;
+    font-family: 'RobotoRegular';
+
+}
+
+.lienCategorie ul {
+    display: flex;
+    justify-content: space-around;
+    list-style: none;
+
+}
+
+.lienCategorie a {
+    text-decoration: none;
+    color: black;
+    padding: 10px;
+}
+
+.lienCategorie a:hover {
+    background-color: #77BC48;
+    color: #ffffff;
+    border-radius: 10px;
+
+}
+
+#equipeEducative {
+    display: flex;
+    margin-top: 2%;
+}
+
+.membre {
+    width: 472px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.column-reverse {
+    display: flex;
+    flex-direction: column-reverse;
+}
+
+.membre.derniers-membres .positionEntreprise {
+    background-color: black;
+}
+
+.membre.derniers-membres .coordoner,
+.membre.derniers-membres .imageContainer,
+.membre.derniers-membres .hoverCard {
+    border: #000000 2px solid;
+}
+
+.espace {
+    padding-top: 3%;
+    padding-bottom: 3%;
+}
+
+.imageContainer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 270px;
+    height: auto;
+    border: 2px solid #77BC48;
+    border-radius: 10px;
+}
+
+.coordoner {
+    border: 2px solid #77BC48;
+    border-radius: 10px;
+    display: flex;
+    font-family: 'robotoRegular';
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 270px;
+    padding-bottom: 2%;
+}
+
+.positionEntreprise {
+    color: #ffffff;
+    padding-bottom: 1%;
+}
+
+.nomPrenom {
+    font-weight: bold;
+}
+
+.coordoner p {
+    padding-top: 3%;
+}
+
+.positionEntreprise {
+    background-color: #77BC48;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    padding-top: 2%;
+}
+
+.cardContainer {
+    position: relative;
+    display: inline-block;
+}
+
+
+
+.hoverCard {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 99%;
+    height: 99%;
+    background-color: rgba(255, 255, 255, 0.794);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    border: 2px solid green;
+    border-radius: 10px;
+    font-family: 'RobotoRegular';
+    font-weight: bold;
+}
+
+.hoverCard p {
+    padding-top: 3%;
+    font-size: 15px;
+    margin: 5px 10px;
+}
+
+.cardContainer:hover .hoverCard {
+    opacity: 1;
+}
+
+.hoverCard h2 {
+    margin: 10px;
+    font-size: 18px;
+}
+
+.nomPrenomCard {
+    padding-bottom: 15%;
+}
+
+
+/* Le style suivant est pour le conteneur principal, 
+    il est centré au milieu de la page avec une taille de 250px par 60px. 
+    Il a également une ombre portée et des coins arrondis. 
+    Le débordement du contenu est caché. 
+.container {
+    position: relative;
+    width: 250px;
+    height: 60px;
+    margin: 0 auto;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
+    border-radius: 10px;
+    overflow: hidden;
+    background-color: white;
+    z-index: -1;
+}
+
+/* Le rectangle supérieur, il a une largeur de 100% et une hauteur de 30px 
+.rectangle-top {
+    width: 100%;
+    height: 30px;
+    border-radius: 10px 10px 0 0;
+    position: relative;
+}*/
+
+/* Ici, nous ajoutons une bande colorée sur le rectangle supérieur via un pseudo-élément 
+.rectangle-top::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 17px;
+    width: 27px;
+    height: 60px;
+    background: linear-gradient(#77BC48, #FFFFFF, #7D5C67);
+    z-index: -1;
+    border-radius: 5px;
+}*/
+
+/* Le rectangle inférieur, miroir du rectangle supérieur. 
+      Il a une animation de rotation et un changement de fond lorsque le conteneur est survolé
+.rectangle-bottom {
+    width: 100%;
+    height: 30px;
+    background-color: #ececec;
+    border-radius: 0 0 10px 10px;
+    position: relative;
+    transform-origin: center top;
+    transition: transform 0.6s, background 0.6s;
+    top: 0;
+}
+ */
+/* Bande colorée sur le rectangle inférieur
+.rectangle-bottom::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 17px;
+    width: 27px;
+    height: 30px;
+    background: linear-gradient(#FFFFFF, #77BC48);
+    border-radius: 0px 0px 5px 5px;
+    z-index: 1;
+} */
+
+/* Le texte est centré à l'intérieur du conteneur principal 
+.center-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+*/
+/* Lorsque le conteneur est survolé, le rectangle inférieur effectue une rotation de 180 degrés 
+.container:hover .rectangle-bottom {
+    transform: rotateX(180deg);
+    background: #ececec;
+}*/
+
+/* Le curseur devient une main lorsque le conteneur est survolé 
+.container:hover {
+    cursor: pointer;
+}*/
+
+/* Lorsque le conteneur est survolé, le gradient de couleur de la bande change 
+.container:hover .rectangle-bottom::after {
+    background: linear-gradient(#FFFFFF, #7D5C67);
+}*/
+
+/* Ce style est pour la deuxième bande colorée 
+.rectangle-second {
+    position: absolute;
+    top: 0;
+    right: 17px;
+    width: 27px;
+    height: 30px;
+    background: linear-gradient(#FFFFFF, #7D5C67);
+    border-radius: 0px 0px 5px 5px;
+    z-index: 1;
+}*/
+
+
+
+.BouttonFleche {
+    margin-left: 5%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    margin-top: 1%;
+    width: 100vw;
+    justify-content: space-evenly;
+    align-items: center;
+    justify-items: center;
+}
+
+.monBouton,
+.flecheAller {
+    padding: 1%;
+}
+
+.button {
+    background-color: #ffffff;
+    border-radius: 10px;
+    display: flex;
+    width: 150px;
+    justify-content: space-around;
+    align-items: center;
+    height: 20px;
+    color: rgb(0, 0, 0);
+    font-size: 15px;
+    font-weight: bold;
+    font-family: sans-serif;
+    text-decoration: none;
+    padding: 10px 20px;
+    box-shadow: 0px 2px 4px rgb(142, 141, 141);
+}
+
+.square {
+    width: 20px;
+    height: 40px;
+    border-radius: 5px;
+    margin-left: 0.5%;
+    background: linear-gradient(black, rgba(0, 0, 0, 0.721), rgba(0, 0, 0, 0.299), rgba(0, 0, 0, 0.721), black);
+}
+
+.flecheAller {
+    display: flex;
+    justify-content: end;
+    width: 150px;
+    animation: flecheAller 1s alternate-reverse infinite;
+}
+
+@keyframes flecheAller {
+    0% {
+        transform: translateX(-5%);
+    }
+
+    100% {
+        transform: translateX(5%);
+    }
+}
+
+#pageDeux {
+    width: 45vw;
+    display: flex;
+    justify-content: space-evenly;
+    flex-direction: column;
+}
+
+#pageDeux .titre {
+    display: flex;
+    justify-content: center;
+    font-size: 35px;
+    font-family: 'philosopherItalic';
+    font-weight: bold;
+    text-decoration: underline;
+}
+
+.membreConseil {
+    width: 100%;
+}
+
+.nomRole {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    justify-items: center;
+    font-family: 'philosopherItalic';
+}
+
+.separation img {
+    height: 97vh;
+
+}
+
+.separation,
+.grid-container,
+#pageDeux {
+    background-color: white;
+    z-index: 5;
+}
+
+.grid-container {
+    display: flex;
+    flex-direction: row;
+
+}
+
+.social-media-icons {
+    display: inline-block;
+    display: grid;
+    grid-template-rows: 1.5fr 1.5fr 1.5fr 1fr;
+    margin-top: 15%;
+    justify-items: center;
+}
+
+.icon-container {
+    position: relative;
+    width: 100px;
+    height: 100px;
+}
+
+.social-media-icons .icon {
+    width: 100%;
+    height: 100%;
+}
+
+.social-media-icons .hover-icon {
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.social-media-icons .icon-container:hover .hover-icon {
+    display: block;
+}
+
+.flecheRetour {
+    margin-top: 20%;
+    transform: scaleX(-1);
+    animation: flecheRetour 1s alternate infinite;
+}
+
+@keyframes flecheRetour {
+    100% {
+        transform: translateX(-5%);
+    }
+
+    0% {
+        transform: translateX(5%);
+    }
+}
+
+
+.gridContainer {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    flex-direction: row;
+    height: 98vh;
+    background-color: white;
+    z-index: 2;
+}
+
+.gridContainer-1 {
+    width: 30vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.gridContainer-1 .titreReseaux {
+    background-color: #7C5C66;
+    border-radius: 10px;
+    color: white;
+    padding: 10% 2% 10% 2%;
+    text-align: center;
+    font-family: sans-serif;
+    margin-top: 15%;
+}
+
+.gridContainer-2 {
+    background: url(../../../inc/img/footer.svg);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 507px;
+    background-repeat: no-repeat;
+    background-size: 100%;
+    color: #ffffff;
+    font-family: 'philosopherRegular';
+}
+
+.gridContainer-2 a {
+    text-decoration: none;
+    color: #ffffff;
+}
+
+.adresseFooter p {
+    display: flex;
+    justify-content: center;
+}
+
+/* .grid-container-2 a {
+    color: white;
+    text-decoration: none;
+} */
+
+.menuColumnFooter {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.designDev {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.dev {
+    margin-top: 7%;
+}
+
+.designDev a:hover,
+.plus a:hover {
+    color: #77BC48;
+}
+
+.menuColumnFooter a:hover {
+    color: #C35B79;
+}
+
+.descriptionResponsive {
+    display: none;
+}
+
+.titreResponsive {
+    display: none;
+}
+
+.position_entrepriseResponsive {
+    display: none;
+}
+
+@media screen and (max-width: 700px) {
+
+    .barreResponsive {
+        background-color: #7D5C67;
+        width: 100%;
+        height: 30px;
+    }
+
+    .header {
+        display: flex;
+        flex-direction: column-reverse;
+    }
+
+    .header .menu {
+        display: flex;
+        margin-top: 2%;
+    }
+
+    .header .logo {
+        width: 150px;
+    }
+
+    .header .titre {
+        display: none;
+    }
+
+    .titreResponsive {
+        display: block;
+        color: #77BC48;
+        font-size: 23px;
+        text-shadow: 3px 2px 3px rgba(0, 0, 0, 0.268);
+        font-family: 'philosopherItalic';
+        margin-top: 2%;
+        margin-bottom: 5%;
+    }
+
+    .description {
+        height: 200px;
+        background: url(../../img/fondResponsive.png);
+        background-size: 100% 100%;
+        background-repeat: no-repeat;
+        background-color: rgba(255, 255, 255, 0.7);
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+    }
+
+    .descriptionResponsive {
+        display: block;
+        font-size: 25px;
+        font-family: 'philosopherRegular';
+        font-weight: bold;
+    }
+
+    .description span {
+        font-family: 'philosopherItalic';
+        height: 94px;
+        margin-left: 0%;
+        margin-top: 0%;
+        padding-bottom: 2%;
+        font-size: 20px;
+        width: 90%;
+
+    }
+
+    .column-reverse {
+        flex-direction: column;
+    }
+
+    #corpPage {
+        background: none;
+    }
+
+    .position_entrepriseResponsive {
+        display: block;
+    }
+
+    #equipeEducative {
+        margin-top: 10%;
+
+    }
+
+    #corpPage {
+        background: none;
+    }
+
+    .lienCategorie {
+        display: none;
+    }
+
+    .membre {
+        flex-direction: column-reverse;
+    }
+}
+
+/* PAGE PARTENAIRE */
+
+.barrepartenaire-Un img,
+.barrepartenaire-Deux img,
+.barrepartenaire-Trois img {
+    width: 100%;
+}
+
+.barrepartenaire-Trois img {
+    margin-top: -6%;
+    transform: scaleX(-1);
+}
+
+.partenaireFinanceurs .h1 {
+    padding-bottom: 5%;
+    display: flex;
+    justify-content: center;
+    font-family: 'philosopherItalic';
+    font-weight: 700;
+
+}
+
+.photoFinanceurs {
+    width: 250px;
+}
+
+
+.partenaireInstitutionnels {
+    overflow: hidden;
+    margin-bottom: 20px;
+}
+
+.partenaireInstitutionnels .photoInstitutionnels {
+    width: 500px;
+    height: 500px;
+    object-fit: contain;
+}
+
+.partenaireInstitutionnels img {
+    width: 50px;
+}
+
+.carouselPaternaireInstitutionnels {
+    background: url(../../img/FondLogoPartenaires.svg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin-top: -6%;
+}
+
+.carrousel {
+    display: flex;
+    flex-wrap: wrap;
+    /* Pour que les images se répartissent sur plusieurs lignes */
+    transition: margin-left 0.5s ease;
+}
+
+.carouselPaternaireInstitutionnels h1 {
+    padding-top: 5%;
+    padding-bottom: 5%;
+    display: flex;
+    justify-content: center;
+    font-family: 'philosopherItalic';
+    font-weight: 700;
+
+}
+
+#carrouselContainer3 {
+    padding-bottom: 7%;
+}
+
+.owl-stage img {
+    height: 260px;
+}
+
+/* .owl-item {
+    width: 100px;
+} */
+
+/* .slick-slider {
+    margin-top: 5%;
+} */
+
+/* PAGE ADMIN */
+
+.validation {
+    margin-left: 50%;
+}
+
+.modif img{
+    margin-left: 40%;
+}
+
+.corpPageAdmin {
+    display: grid;
+    grid-template-columns: 1fr 4fr;
+}
+
+.menuCrud {
+    height: 80vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+h1 {
+    margin-left: 2%;
+    margin-top: 2%;
+}
+
+.lienCrud {
+    display: flex;
+    align-items: center;
+    font-family: 'RobotoRegular';
+    font-size: 17px;
+    text-decoration: none;
+    color: #000000;
+    margin-left: 5%;
+}
+
+.menuCrud {
+    margin-left: 5%;
+}
+
+.menuCrud p {
+    color: #000000;
+    font-size: 22px;
+    font-family: 'RobotoRegular';
+    font-weight: 700;
+    margin-bottom: 7%;
+}
+
+.headerAdmin {
+    display: flex;
+    justify-content: space-between;
+}
+
+.headerDroite,
+.headerGauche {
+    width: 350px;
+}
+
+.headerGauche h3 {
+    display: flex;
+    align-items: center;
+    margin: 4% 2% 5% 0%;
+}
+
+h2 {
+    font-weight: normal;
+}
+
+table {
+    border: 1px solid #333;
+    height: 40vh;
+    width: 70vw;
+    margin-top: 5%;
+}
+
+tbody p {
+    display: flex;
+    justify-content: center;
+}
+
+thead {
+    background-color: rgb(218, 222, 233);
+}
+
+thead th {
+    padding: 1% 2% 1% 2%;
+}
+
+td .photoAdmin {
+    width: 50px;
+}
+
+td {
+    padding: 0.5%;
+}
+
+#btn {
+    border: none;
+}
+
+.nomAdmin,
+.diminutifAdmin {
+    font-size: 17px;
+
+}
+
+#corpsAdmin {
+    display: none;
+}
+
+.owl-carousel .owl-item img {
+    width: 50%;
+}
+

@@ -1,0 +1,173 @@
+.footer {
+    background: url("../../img/footer-image.svg");
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.grid-container {
+    display: grid;
+    grid-gap: 10px;
+}
+
+.grid-container-1 {
+    grid-template-columns: 10% 10% 55% 25%;
+}
+
+.grid-container-2 {
+    grid-template-columns: 1fr 1fr 1fr;
+}
+
+.grid-item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 150px;
+}
+
+.fleche-haut {
+    animation: zoomInOut 1s infinite;
+}
+
+@keyframes zoomInOut {
+    0% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(0.8);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}
+
+.fleche-haut-button {
+    border: none;
+    background: none;
+    cursor: pointer;
+}
+
+.fleche-haut-button:focus {
+    outline: none;
+}
+
+.tiershaut {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-weight: bold;
+    margin-bottom: 10px;
+    margin-top: 20px;
+}
+
+.menu-column {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+.menu-column a {
+    color: black;
+    text-decoration: none;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.logo {
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 10px;
+    background-color: var(--logo-bg-color);
+    border-radius: 20px;
+    padding: 5px;
+}
+
+.logo img {
+    width: 300px;
+    height: 80px;
+    max-width: 100%;
+    max-height: 100%;
+}
+
+.tiershaut a:hover {
+    color: var(--hover-color);
+}
+
+.tiershaut-centre {
+    color: var(--text-color);
+    text-align: center;
+}
+
+.tiershaut-droit {
+    color: var(--text-color);
+    margin-bottom: 10px;
+    text-decoration: underline;
+}
+
+.reseauxsociaux {
+    display: flex;
+    justify-content: space-between;
+    width: 200px;
+}
+
+.reseauxsociaux img {
+    display: inline-block;
+    width: var(--social-icon-size);
+    height: var(--social-icon-size);
+    max-width: 100%;
+    max-height: 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+    filter: brightness(0) invert(1);
+}
+
+.reseauxsociaux a:hover img {
+    filter: none;
+}
+
+.tiersbas {
+    height: 100%;
+    flex-direction: column;
+    color: white;
+    display: flex;
+    justify-content: end;
+    margin-top: 18px;
+}
+
+.gauche {
+    text-align: start;
+    padding-left: 10px;
+}
+
+.centre {
+    text-align: center;
+}
+
+.droit {
+    text-align: end;
+    padding-right: 10px;
+}
+
+.tiersbas span {
+    text-decoration: underline;
+}
+
+.mentions-legales {
+    color: white;
+}
+
+.mentions-legales:hover {
+    color: var(--hover-color-2);
+}
+
+.email {
+    color: white;
+    text-decoration: none;
+}
+
+.email:hover {
+    color: var(--hover-color-2);
+}
