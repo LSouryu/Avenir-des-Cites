@@ -63,7 +63,7 @@ ul {
 }
 
 .grid-item-unique {
-  min-height: 100vh;
+  min-height: 50vh;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -210,9 +210,14 @@ ul {
   justify-content: space-between;
 }
 
+.article-container {
+    margin-top: 10vh;
+    margin-bottom: 10vh;
+}
+
 .objectif article {
   width: 28.125rem;
-  height: 18.75rem;
+  height: 28.125rem;
   border-radius: 1.25rem;
   display: flex;
   align-items: center;
@@ -318,6 +323,7 @@ ul {
   box-shadow: 0.3125rem 0.3125rem 0.625rem rgba(0, 0, 0, 0.5);
   border-radius: 0.625rem;
   overflow: hidden;
+  margin-bottom: 10vh;
 }
 
 /* Style pour le rectangle supérieur */
